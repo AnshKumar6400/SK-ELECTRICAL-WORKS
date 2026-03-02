@@ -2,16 +2,41 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>S K Electrical Works | Industrial & Residential Electricians</title>
-    <meta name="description" content="S K Electrical Works provides industrial and residential electrical services including wiring, panel upgrades, chipping & cutting, and emergency support.">
-    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="description" content="S K Electrical Works is a trusted electrical contractor in Hyderabad providing industrial, commercial, and residential electrical services including wiring, panel upgrades, solar installations, and 24/7 emergency support.">    <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#00C853">
-    <link rel="canonical" href="https://example.com/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:title" content="S K Electrical Works | Hyderabad Electricians">
+    <meta property="og:description" content="Industrial and residential electrical services in Hyderabad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.skelectricalworks.in">
+    <meta property="og:image" content="https://www.skelectricalworks.in/your-banner.jpg">
+    <link rel="canonical" href="https://www.skelectricalworks.in/">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1920&q=80">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "S K Electrical Works",
+  "image": "https://www.skelectricalworks.in/",
+  "url": "https://www.skelectricalworks.in",
+  "telephone": "+919454814684",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Hyderabad"
+}
+</script>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
     <style>
         :root {
             --primary: #00C853;
@@ -389,6 +414,7 @@
                 <span class="cs-label-line"></span>
                 <span class="cs-label-text">Hyderabad's Trusted Electricians</span>
             </div>
+            <h1 style="display: none;">Industrial & Residential Electricians in Hyderabad</h1>
             <h1 class="cs-title">Power That <em>Never</em> Fails You</h1>
             <p class="cs-text">From high-voltage industrial installations to precision residential wiring — S K Electrical Works delivers certified, reliable, and code-compliant electrical solutions for every project scale.</p>
             <div class="cs-buttons">
@@ -875,7 +901,7 @@ form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3000/send", {
+    const res = await fetch("/api/send", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json" 
