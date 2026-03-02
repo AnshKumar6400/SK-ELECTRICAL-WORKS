@@ -31,6 +31,37 @@ for (const item of dropDowns) {
 	};
 	item.addEventListener('click', onClick);
 }
+const form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = form.querySelector("[name='name']").value;
+  const phone = form.querySelector("[name='phone']").value;
+  const message = form.querySelector("[name='message']").value;
+
+  try {
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, phone, message })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Error sending message.");
+    }
+
+  } catch (error) {
+    alert("Something went wrong.");
+  }
+});
 class CS_GalleryFilter {
 	filtersSelector = '.cs-button';
 	galleriesSelector = '.cs-gallery';
